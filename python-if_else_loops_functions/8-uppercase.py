@@ -1,4 +1,10 @@
 #!/usr/bin/python3
 
-for i in range(97, 123):
-    print("{:c}".format(i), end="")
+def uppercase(str):
+    result = ""
+    for char in str:
+        if 'a' <= char <= 'z':
+            result += chr(ord(char) - 32)
+        else:
+            result += char
+    print(result)
