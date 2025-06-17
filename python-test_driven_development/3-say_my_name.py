@@ -30,7 +30,7 @@ def say_my_name(first_name, last_name=""):
         My name is John Smith
 
         >>> say_my_name("Bob")
-        My name is Bob 
+        My name is Bob
 
         >>> say_my_name("Alice", "Johnson")
         My name is Alice Johnson

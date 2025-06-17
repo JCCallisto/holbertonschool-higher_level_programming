@@ -11,7 +11,7 @@ specific punctuation marks.
 def text_indentation(text):
     """
     Prints text with proper indentation after specific punctuation marks.
-    
+
     The function prints the text character by character, and after each
     occurrence of '.', '?', or ':', it prints two new lines and skips
     any following spaces.
@@ -21,7 +21,7 @@ def text_indentation(text):
 
     Returns:
         None: This function prints the formatted text and
-        doesn't return a value.
+              doesn't return a value.
 
     Raises:
         TypeError: If text is not a string.

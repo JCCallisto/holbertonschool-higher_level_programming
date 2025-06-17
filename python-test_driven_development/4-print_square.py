@@ -12,10 +12,12 @@ def print_square(size):
     Prints a square pattern using hash (#) characters.
 
     Args:
-        size (int): The size of the square (width and height). Must be a non-negative integer.
+        size (int): The size of the square (width and height).
+                    Must be a non-negative integer.
 
     Returns:
-        None: This function prints the square pattern and doesn't return a value.
+        None: This function prints the square pattern and doesn't return
+              a value.
 
     Raises:
         TypeError: If size is not an integer.
@@ -28,27 +30,27 @@ def print_square(size):
         ####
         ####
         ####
-        
+
         >>> print_square(1)
         #
-        
+
         >>> print_square(0)
-        
+
         >>> print_square(-1)
         Traceback (most recent call last):
             ...
         ValueError: size must be >= 0
-        
+
         >>> print_square()
         Traceback (most recent call last):
             ...
         TypeError: print_square() missing 1 required positional argument: 'size'
-        
+
         >>> print_square("3")
         Traceback (most recent call last):
             ...
         TypeError: size must be an integer
-        
+
         >>> print_square(3.5)
         Traceback (most recent call last):
             ...
@@ -59,5 +61,6 @@ def print_square(size):
 
     if size < 0:
         raise ValueError("size must be >= 0")
+
     for i in range(size):
         print("#" * size)
