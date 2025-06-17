@@ -50,3 +50,9 @@ Test 9 - Float overflow with infinity:
     Traceback (most recent call last):
         ...
     OverflowError: cannot convert float infinity to integer
+
+Test 10 - ValueError with NaN:
+    >>> add_integer(float('nan'), 1)
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
