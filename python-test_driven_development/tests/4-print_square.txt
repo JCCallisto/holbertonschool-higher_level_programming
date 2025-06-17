@@ -28,3 +28,9 @@ Test 4 - ValueError for negative size:
     Traceback (most recent call last):
         ...
     ValueError: size must be >= 0
+
+Test 5 - TypeError for non-integer size:
+    >>> print_square(3.5)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer

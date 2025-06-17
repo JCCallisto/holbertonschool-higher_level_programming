@@ -9,7 +9,7 @@ This is a doctest file for the text_indentation function.
 First import the function:
     >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-Test - Basic text indentation with punctuation:
+Test 1 - Basic text indentation with punctuation:
     >>> text_indentation("Hello. How are you? I am fine: thanks")
     Hello.
     <BLANKLINE>
@@ -18,3 +18,9 @@ Test - Basic text indentation with punctuation:
     I am fine:
     <BLANKLINE>
     thanks
+
+Test 2 - TypeError for non-string input:
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string

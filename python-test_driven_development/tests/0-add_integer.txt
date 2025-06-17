@@ -44,3 +44,9 @@ Test 7 - TypeError with None as first argument:
 Test 8 - Zero values:
     >>> add_integer(0, 0)
     0
+
+Test 9 - Float overflow with infinity:
+    >>> add_integer(float('inf'), 1)
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
