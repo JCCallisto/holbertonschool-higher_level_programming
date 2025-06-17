@@ -3,7 +3,8 @@
 """
 Module for printing square patterns.
 
-This module contains a function to print a square pattern using hash characters.
+This module contains a function to print a square pattern
+using hash characters.
 """
 
 
@@ -44,7 +45,8 @@ def print_square(size):
         >>> print_square()
         Traceback (most recent call last):
             ...
-        TypeError: print_square() missing 1 required positional argument: 'size'
+        TypeError: print_square() missing 1 required positional argument:
+        'size'
 
         >>> print_square("3")
         Traceback (most recent call last):
