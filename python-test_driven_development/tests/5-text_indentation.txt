@@ -1,0 +1,20 @@
+The ``text_indentation`` module
+=================================
+
+Using ``text_indentation``
+--------------------------
+
+This is a doctest file for the text_indentation function.
+
+First import the function:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test - Basic text indentation with punctuation:
+    >>> text_indentation("Hello. How are you? I am fine: thanks")
+    Hello.
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+    I am fine:
+    <BLANKLINE>
+    thanks

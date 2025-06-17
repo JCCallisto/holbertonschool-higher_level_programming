@@ -1,0 +1,30 @@
+The ``say_my_name`` module
+============================
+
+Using ``say_my_name``
+---------------------
+
+This is a doctest file for the say_my_name function.
+
+First import the function:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Test 1 - Both first and last name:
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+Test 2 - Only first name (default last name):
+    >>> say_my_name("Bob")
+    My name is Bob 
+
+Test 3 - TypeError for non-string first name:
+    >>> say_my_name(12, "White")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+Test 4 - TypeError for non-string last name:
+    >>> say_my_name("John", 123)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string

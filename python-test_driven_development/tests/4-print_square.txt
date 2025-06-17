@@ -1,0 +1,30 @@
+The ``print_square`` module
+============================
+
+Using ``print_square``
+----------------------
+
+This is a doctest file for the print_square function.
+
+First import the function:
+    >>> print_square = __import__('4-print_square').print_square
+
+Test 1 - Print a 4x4 square:
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+Test 2 - Print a 1x1 square:
+    >>> print_square(1)
+    #
+
+Test 3 - Print a 0x0 square (empty):
+    >>> print_square(0)
+
+Test 4 - ValueError for negative size:
+    >>> print_square(-1)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
