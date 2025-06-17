@@ -53,7 +53,8 @@ def text_indentation(text):
         >>> text_indentation()
         Traceback (most recent call last):
             ...
-        TypeError: text_indentation() missing 1 required positional argument: 'text'
+        TypeError: text_indentation() missing 1 required
+        positional argument: 'text'
 
         >>> text_indentation(123)
         Traceback (most recent call last):
