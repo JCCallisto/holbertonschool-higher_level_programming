@@ -9,7 +9,8 @@ property getter/setter for size and position, and positioned visual printing.
 class Square:
     """
     A class that defines a square with private size and position attributes,
-    validation, area calculation, property access, and positioned visual printing.
+    validation, area calculation, property access, and positioned visual
+    printing.
     """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -73,8 +74,8 @@ class Square:
             TypeError: If position is not a tuple of 2 positive integers
         """
         if (not isinstance(value, tuple) or len(value) != 2 or
-            not all(isinstance(i, int) for i in value) or
-            not all(i >= 0 for i in value)):
+                not all(isinstance(i, int) for i in value) or
+                not all(i >= 0 for i in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
