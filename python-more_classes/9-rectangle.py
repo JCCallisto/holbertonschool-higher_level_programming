@@ -158,7 +158,7 @@ class Rectangle:
 
         Returns:
             int: The perimeter of the rectangle.
-            Returns 0 if either 
+            Returns 0 if either
                 width or height is 0, otherwise returns 2 × (width + height).
 
         Examples:

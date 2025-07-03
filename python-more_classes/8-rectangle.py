@@ -151,7 +151,8 @@ class Rectangle:
 
     def __del__(self):
         """
-        Destructor that decrements the instance counter and prints a farewell message.
+        Destructor that decrements the instance counter and
+        prints a farewell message.
         """
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
@@ -162,7 +163,7 @@ class Rectangle:
         Compare two rectangles and return the one with
         the larger or equal area.
 
-        This static method compares two Rectangle instances based on their 
+        This static method compares two Rectangle instances based on their
         areas and returns the one with the larger area. If areas are equal,
         returns the first rectangle.
 

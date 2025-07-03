@@ -16,7 +16,8 @@ class Rectangle:
     non-negative integers.
 
     Attributes:
-        width (int): The width of the rectangle. Must be a non-negative integer.
+        width (int): The width of the rectangle.
+        Must be a non-negative integer.
         height (int): The height of the rectangle.
         Must be a non-negative integer.
     """
