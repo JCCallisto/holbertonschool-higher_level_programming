@@ -11,11 +11,11 @@ exercises or as a placeholder for future implementation.
 class Rectangle:
     """
     A basic Rectangle class with no implementation.
-    
+
     This is an empty class that serves as a foundation for building
     a more complete Rectangle implementation. It can be instantiated
     but has no attributes or methods defined.
-    
+
     Examples:
         >>> rect = Rectangle()
         >>> type(rect)

@@ -9,17 +9,20 @@ for user-friendly display and repr representation for debugging purposes.
 
 class Rectangle:
     """
-    A Rectangle class with validated properties, calculations, and dual representations.
-    
+    A Rectangle class with validated properties, calculations,
+    and dual representations.
+
     This class provides width and height properties with validation,
     methods to calculate area and perimeter, a visual string representation
     using '#' characters, and a repr representation for debugging.
-    
+
     Attributes:
-        width (int): The width of the rectangle. Must be a non-negative integer.
-        height (int): The height of the rectangle. Must be a non-negative integer.
+        width (int): The width of the rectangle.
+        Must be a non-negative integer.
+        height (int): The height of the rectangle.
+        Must be a non-negative integer.
     """
-    
+
     def __init__(self, width=0, height=0):
         """
         Initialize a new Rectangle instance.
@@ -36,7 +39,7 @@ class Rectangle:
             >>> rect = Rectangle()
             >>> print(rect.width, rect.height)
             0 0
-            
+
             >>> rect = Rectangle(5, 3)
             >>> print(rect.width, rect.height)
             5 3
@@ -119,14 +122,14 @@ class Rectangle:
         Calculate the perimeter of the rectangle.
 
         Returns:
-            int: The perimeter of the rectangle. Returns 0 if either 
+            int: The perimeter of the rectangle. Returns 0 if either
                 width or height is 0, otherwise returns 2 × (width + height).
 
         Examples:
             >>> rect = Rectangle(5, 3)
             >>> rect.perimeter()
             16
-            
+
             >>> rect = Rectangle(0, 5)
             >>> rect.perimeter()
             0
@@ -139,8 +142,8 @@ class Rectangle:
         """
         Return a string representation of the rectangle using '#' characters.
 
-        Creates a visual representation of the rectangle where each '#' 
-        represents one unit of area. The rectangle is drawn with the 
+        Creates a visual representation of the rectangle where each '#'
+        represents one unit of area. The rectangle is drawn with the
         specified width and height.
 
         Returns:
@@ -152,10 +155,10 @@ class Rectangle:
             >>> print(rect)
             ###
             ###
-            
+
             >>> rect = Rectangle(0, 2)
             >>> print(rect)
-            
+
         """
         if self.__width == 0 or self.__height == 0:
             return ""
@@ -168,8 +171,10 @@ class Rectangle:
         """
         Return a string representation that can be used to recreate the object.
 
-        This method provides a developer-friendly representation of the Rectangle
-        object that shows the constructor call needed to create an identical object.
+        This method provides a developer-friendly representation
+        of the Rectangle.
+        object that shows the constructor call needed
+        to create an identical object.
 
         Returns:
             str: A string in the format "Rectangle(width, height)".
@@ -178,11 +183,11 @@ class Rectangle:
             >>> rect = Rectangle(5, 3)
             >>> repr(rect)
             'Rectangle(5, 3)'
-            
+
             >>> rect = Rectangle()
             >>> repr(rect)
             'Rectangle(0, 0)'
-            
+
             >>> eval(repr(Rectangle(4, 2))).area()
             8
         """

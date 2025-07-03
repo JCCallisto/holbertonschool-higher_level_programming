@@ -10,15 +10,17 @@ calculating the area and perimeter of the rectangle.
 class Rectangle:
     """
     A Rectangle class with validated properties and calculation methods.
-    
+
     This class provides width and height properties with validation,
     along with methods to calculate the area and perimeter of the rectangle.
-    
+
     Attributes:
-        width (int): The width of the rectangle. Must be a non-negative integer.
-        height (int): The height of the rectangle. Must be a non-negative integer.
+        width (int): The width of the rectangle.
+        Must be a non-negative integer.
+        height (int): The height of the rectangle.
+        Must be a non-negative integer.
     """
-    
+
     def __init__(self, width=0, height=0):
         """
         Initialize a new Rectangle instance.
@@ -35,7 +37,7 @@ class Rectangle:
             >>> rect = Rectangle()
             >>> print(rect.width, rect.height)
             0 0
-            
+
             >>> rect = Rectangle(5, 3)
             >>> print(rect.width, rect.height)
             5 3
@@ -122,11 +124,11 @@ class Rectangle:
             >>> rect = Rectangle(5, 3)
             >>> rect.area()
             15
-            
+
             >>> rect = Rectangle(0, 5)
             >>> rect.area()
             0
-            
+
             >>> rect = Rectangle(4, 4)
             >>> rect.area()
             16
@@ -138,18 +140,18 @@ class Rectangle:
         Calculate the perimeter of the rectangle.
 
         Returns:
-            int: The perimeter of the rectangle. Returns 0 if either 
+            int: The perimeter of the rectangle. Returns 0 if either
                 width or height is 0, otherwise returns 2 × (width + height).
 
         Examples:
             >>> rect = Rectangle(5, 3)
             >>> rect.perimeter()
             16
-            
+
             >>> rect = Rectangle(0, 5)
             >>> rect.perimeter()
             0
-            
+
             >>> rect = Rectangle(4, 4)
             >>> rect.perimeter()
             16

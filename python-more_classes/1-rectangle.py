@@ -10,16 +10,17 @@ input validation, and getter/setter properties for width and height.
 class Rectangle:
     """
     A Rectangle class with validated width and height properties.
-    
+
     This class implements proper encapsulation using private attributes
     and properties with validation to ensure width and height are
     non-negative integers.
-    
+
     Attributes:
         width (int): The width of the rectangle. Must be a non-negative integer.
-        height (int): The height of the rectangle. Must be a non-negative integer.
+        height (int): The height of the rectangle.
+        Must be a non-negative integer.
     """
-    
+
     def __init__(self, width=0, height=0):
         """
         Initialize a new Rectangle instance.
@@ -36,7 +37,7 @@ class Rectangle:
             >>> rect = Rectangle()
             >>> print(rect.width, rect.height)
             0 0
-            
+
             >>> rect = Rectangle(5, 3)
             >>> print(rect.width, rect.height)
             5 3
@@ -71,7 +72,7 @@ class Rectangle:
             >>> rect.width = 5
             >>> rect.width
             5
-            
+
             >>> rect.width = -1  # Raises ValueError
             >>> rect.width = "5"  # Raises TypeError
         """
@@ -108,7 +109,7 @@ class Rectangle:
             >>> rect.height = 3
             >>> rect.height
             3
-            
+
             >>> rect.height = -1  # Raises ValueError
             >>> rect.height = "3"  # Raises TypeError
         """

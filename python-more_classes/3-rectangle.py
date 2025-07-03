@@ -9,17 +9,19 @@ string representation using ASCII characters.
 
 class Rectangle:
     """
-    A Rectangle class with validated properties, calculations, and string representation.
-    
+    A Rectangle class with validated properties, calculations,
+    and string representation.
+
     This class provides width and height properties with validation,
     methods to calculate area and perimeter, and a visual representation
     using '#' characters when printed.
-    
+
     Attributes:
         width (int): The width of the rectangle. Must be a non-negative integer.
-        height (int): The height of the rectangle. Must be a non-negative integer.
+        height (int): The height of the rectangle.
+        Must be a non-negative integer.
     """
-    
+
     def __init__(self, width=0, height=0):
         """
         Initialize a new Rectangle instance.
@@ -36,7 +38,7 @@ class Rectangle:
             >>> rect = Rectangle()
             >>> print(rect.width, rect.height)
             0 0
-            
+
             >>> rect = Rectangle(5, 3)
             >>> print(rect.width, rect.height)
             5 3
@@ -119,14 +121,14 @@ class Rectangle:
         Calculate the perimeter of the rectangle.
 
         Returns:
-            int: The perimeter of the rectangle. Returns 0 if either 
+            int: The perimeter of the rectangle. Returns 0 if either
                 width or height is 0, otherwise returns 2 × (width + height).
 
         Examples:
             >>> rect = Rectangle(5, 3)
             >>> rect.perimeter()
             16
-            
+
             >>> rect = Rectangle(0, 5)
             >>> rect.perimeter()
             0
@@ -139,8 +141,8 @@ class Rectangle:
         """
         Return a string representation of the rectangle using '#' characters.
 
-        Creates a visual representation of the rectangle where each '#' 
-        represents one unit of area. The rectangle is drawn with the 
+        Creates a visual representation of the rectangle where each '#'
+        represents one unit of area. The rectangle is drawn with the
         specified width and height.
 
         Returns:
@@ -152,17 +154,17 @@ class Rectangle:
             >>> print(rect)
             ###
             ###
-            
+
             >>> rect = Rectangle(1, 4)
             >>> print(rect)
             #
             #
             #
             #
-            
+
             >>> rect = Rectangle(0, 2)
             >>> print(rect)
-            
+
         """
         if self.__width == 0 or self.__height == 0:
             return ""
