@@ -1,0 +1,54 @@
+# BaseGeometry Class Documentation
+
+## Overview
+`BaseGeometry` is a base class for geometric shapes with validation capabilities.
+
+## Class Definition
+```python
+class BaseGeometry:
+```
+
+## Methods
+
+### area(self)
+- **Description**: Abstract method for calculating area
+- **Parameters**: None (uses self)
+- **Returns**: None (always raises exception)
+- **Raises**: `Exception` with message "area() is not implemented"
+- **Purpose**: To be overridden by subclasses
+
+### integer_validator(self, name, value)
+- **Description**: Validates that a value is a positive integer
+- **Parameters**:
+  - `name` (str): The name of the parameter being validated
+  - `value`: The value to validate
+- **Returns**: None (if validation passes)
+- **Raises**:
+  - `TypeError`: If value is not an integer, with message "{name} must be an integer"
+  - `ValueError`: If value is <= 0, with message "{name} must be greater than 0"
+
+## Usage Examples
+
+### Valid Cases
+```python
+bg = BaseGeometry()
+bg.integer_validator("my_int", 12)  # No exception
+bg.integer_validator("width", 89)   # No exception
+```
+
+### Invalid Cases
+```python
+# TypeError: name must be an integer
+bg.integer_validator("name", "John")
+
+# ValueError: age must be greater than 0
+bg.integer_validator("age", 0)
+
+# ValueError: distance must be greater than 0
+bg.integer_validator("distance", -4)
+```
+
+## Notes
+- The `area()` method is intended to be overridden by subclasses
+- The `integer_validator()` uses `type(value) is not int` for strict type checking
+- Values must be positive integers (greater than 0)

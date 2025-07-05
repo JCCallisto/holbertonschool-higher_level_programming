@@ -1,0 +1,38 @@
+# MyList Class Documentation
+
+## Overview
+`MyList` is a class that inherits from Python's built-in `list` class, extending it with additional functionality for sorted printing.
+
+## Class Definition
+```python
+class MyList(list):
+```
+
+## Methods
+
+### print_sorted(self)
+- **Description**: Prints the list in ascending sorted order
+- **Parameters**: None (uses self)
+- **Returns**: None (prints to stdout)
+- **Behavior**: 
+  - Prints the elements of the list sorted in ascending order
+  - Does not modify the original list
+  - Assumes all elements are integers
+
+## Usage Example
+```python
+my_list = MyList()
+my_list.append(1)
+my_list.append(4)
+my_list.append(2)
+my_list.append(3)
+my_list.append(5)
+print(my_list)          # [1, 4, 2, 3, 5]
+my_list.print_sorted()  # [1, 2, 3, 4, 5]
+print(my_list)          # [1, 4, 2, 3, 5] (unchanged)
+```
+
+## Notes
+- All inherited methods from `list` are available (append, extend, pop, etc.)
+- The `print_sorted()` method uses Python's built-in `sorted()` function
+- Original list order is preserved after calling `print_sorted()
