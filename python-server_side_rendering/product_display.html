@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Product Display</title>
+    <style>
+      table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 6px; }
+      th { background: #eee; }
+    </style>
+</head>
+<body>
+    {% include 'header.html' %}
+    <h1>Product List</h1>
+    {% if error %}
+        <p style="color:red;"><strong>{{ error }}</strong></p>
+    {% elif products and products|length > 0 %}
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
+            {% for p in products %}
+            <tr>
+                <td>{{ p.name if p.name is defined else p['name'] }}</td>
+                <td>{{ p.category if p.category is defined else p['category'] }}</td>
+                <td>${{ "%.2f"|format(p.price if p.price is defined else p['price']) }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No products found.</p>
+    {% endif %}
+    {% include 'footer.html' %}
+</body>
+</html>
